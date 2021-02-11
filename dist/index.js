@@ -21,7 +21,10 @@ const AlertDialog = ({ close, message, options }) => {
                         action.onClick();
                         close();
                     }, color: "primary", key: index }, action.copy))),
-            react_1.default.createElement(Button_1.default, { onClick: close, color: "primary" }, options.closeCopy || "Okay"))));
+            if(options.hide){
+            } else {
+                react_1.default.createElement(Button_1.default, { onClick: close, color: "primary" }, options.closeCopy || "Okay"))));
+            }
 };
 exports.default = AlertDialog;
 //# sourceMappingURL=index.js.map
